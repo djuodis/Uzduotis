@@ -15,9 +15,11 @@ function average(countrie, area, people){
 
     var populationMillions = (people / 1000000).toFixed(2)
 
-    var km2 = (people / area ).toFixed(2)
+    var km2 = (people / area ).toFixed(0)
 
-    var m2 = (km2 * 100000).toFixed(2)
+    var m2 = (1 / km2) 
 
-    console.log(`Šalis: ${countrie}, joje gyvena: ${populationMillions} mln. gyventojų. Valstybės plotas: ${area} km², Plotas tenkantis vienam gyventojui: ${m2} m² `)
+    var gyventojuim2 = (m2 * 1000000) .toFixed(2)
+
+    console.log(`Šalis: ${countrie}, joje gyvena: ${populationMillions} mln. gyventojų. Valstybės plotas: ${area} km², Plotas tenkantis vienam gyventojui: ${gyventojuim2} m² `)
 }
